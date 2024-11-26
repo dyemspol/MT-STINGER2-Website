@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200..700&family=Zen+Dots&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "arial";
+  scroll-behavior: smooth;
+}
+
+:root {
+  --grey: rgb(38, 38, 38);
+}
+.container {
+  width: 100%;
+  height: 100vh;
+
+  position: relative;
+}
+.mt-video {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Send video behind content */
+}
+
+.logo img {
+  width: 60px;
+  height: 60px;
+  padding: 1px;
+}
+
+nav {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 11%;
+  background-color: var(--grey);
+}
+
+.menu {
+  display: flex;
+  gap: 2rem;
+}
+.menulist a {
+  font-size: 1.3rem;
+  color: white;
+  transition: all 0.3s ease;
+  &:hover {
+    color: red;
+  }
+}
+
+.rightside {
+  padding-top: 80px;
+  position: absolute;
+  color: white;
+
+  p {
+    color: white;
+    letter-spacing: 2px;
+  }
+  h3 {
+    color: white;
+    font-size: 2.4rem;
+    font-family: "Zen Dots", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 0px 0px 10px 0px;
+    letter-spacing: 4px;
+  }
+}
+.menuLOGO {
+  font-size: 1.7rem;
+  color: white;
+}
+.menuLOGO,
+#checks {
+  display: none;
+}
+
+.landingpage-script {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: start;
+  align-items: center;
+}
+.shopnow-btn {
+  margin: 20px 0px;
+  padding: 10px;
+  width: 150px;
+  outline: none;
+  border: none;
+  transition: all 0.3s ease;
+  border-radius: 3px;
+  background-color: red;
+
+  a {
+    color: rgb(220, 220, 220);
+    font-family: "Zen Dots", sans-serif;
+    letter-spacing: 0.5px;
+  }
+  &:hover {
+    background: rgb(255, 106, 106);
+  }
+}
+
+@media (max-width: 820px) {
+  .menuLOGO {
+    display: block;
+  }
+
+  .menu {
+    position: absolute;
+    top: 80px;
+    left: 0px;
+    width: 100%;
+    background-color: var(--grey);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 0;
+    overflow: hidden;
+  }
+
+  #checks:checked ~ .menu {
+    height: 100vh;
+  }
+}
+
+.page2 {
+  width: 100%;
+  height: auto;
+}
+.page2-container {
+  display: flex;
+  margin: 50px 0px;
+  padding: 0px 0px 20px 0px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .description p {
+    text-align: center;
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, 0.626);
+  }
+
+  .helmet-title {
+    font-weight: 600;
+    font-family: "Kanit", sans-serif;
+    font-size: 1.9rem;
+    letter-spacing: 2px;
+    margin: 10px 0px;
+    color: rgba(0, 0, 0, 0.626);
+  }
+}
+
+/* THIS IS A PAGE # */
+.page3-pictureHelmet img {
+  width: 410px;
+}
+.page3-container {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(45, 45, 45);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10%;
+
+  .page3-description {
+    color: white;
+  }
+  .page3-MThelmet_title {
+    font-size: 3rem;
+    font-family: "Kanit", sans-serif;
+  }
+  p {
+    width: 420px;
+  }
+}
+@media (max-width: 960px) {
+  .page3-description {
+    text-align: center;
+  }
+}
